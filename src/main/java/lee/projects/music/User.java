@@ -7,17 +7,17 @@ import java.io.Serializable;
 
 @Entity
 @Data
-//@Table(name = "user")
+@Table(name = "Music")
 public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @Column(name = "Artist", nullable = false)
+    @Column(name = "Artist", nullable = false)
     private String artist;
 
-//    @Column(name = "Track_Title", nullable = false)
+    @Column(name = "Track_Title", nullable = false)
     private String trackTitle;
 
 
