@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MusicMatcher</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="bbc.co.uk/sport">BBC</a></li>
+            <li><a class="dropdown-item" href="google.co.uk">Google</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<body>
+    <section class="sep-boxes">
+  <ul class="title-one">
+    <label for="exampleFormControlInput1" class="form-label">Search:</label>
+    <div class="le-box">
+      <!-- <label for="exampleFormControlInput1" class="form-label">Artist</label> -->
+      <input type="artist" class="form-control" id="exampleFormControlInput1" placeholder="Artist name...">
+     <button class="btn btn-outline-success le-button" type="submit">Search</button>
+  </div>
+  <div class="le-box">
+     <!-- <label for="exampleFormControlInput1" class="form-label">Track Title</label> -->
+      <input type="trackTitle" class="form-control" id="exampleFormControlInput1" placeholder="Track title...">
+      <button class="btn btn-outline-success le-button" type="submit">Search</button>
+  </div>
+</ul>
+<div>
+  <tbody>
+    <ul class="title-two">
+      <div class="le-box-two">
+        <label for="form-label" class="form-label">Track List</label>
+    <tr *ngFor="let user of users">
+      <td>{{user.artist}}</td>
+      <td>{{user.trackTitle}}</td>
+      <td>
+        <!-- <a href="mailto:{{user.email}}">{{user.email}}</a> -->
+      </td>
+      <td>
+        <a href="#" class="btn btn-outline-success le-button">Update</a>
+        <button class="btn btn-outline-success le-button">Delete</button>
+      </td>
+    </tr>
+    </div>
+    </ul>
+  </tbody>
+</div>
+</section>
+</body>
+<SCRIPt></SCRIPt>
+</html>

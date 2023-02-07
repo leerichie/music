@@ -1,0 +1,72 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
+body{
+    margin-top:20px;
+    background: #f5f5f5;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.title-one {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 400px;
+  border: 2px solid rgb(153, 148, 148);
+  padding: 20px;
+  padding-bottom: 5px;
+  margin: 30px;
+}
+.title-two {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 1000px;
+  border: 2px solid rgb(153, 148, 148);
+  padding: 20px;
+  padding-bottom: 5px;
+  margin: 30px;
+}
+.le-button {
+    width: 80px;
+    border: 1px solid rgb(10, 131, 137);
+    padding: 2px;
+    margin-top: 5px;
+}
+.le-box{
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.le-box-two{
+    padding-bottom: 15px;
+
+}
+table, th, td {
+    width: 500px
+  }
+
+.exampleFormControlInput1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+
+}
+.nav-link {
+    color: rgb(156, 119, 93);
+}
+.navbar-brand {
+    color: indigo;
+    font-family: fantasy;
+    font-size: xx-large;
+    padding-bottom: 0px;
+
+}
+.form-label{
+    font-size: larger;
+    font-weight: bold;
+    font-family: fantasy;
+}
+.sep-boxes{
+    flex-wrap: wrap;
+
+}
