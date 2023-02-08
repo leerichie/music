@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Main Page</title>
 </head>
 
 <nav class="navbar navbar-expand-lg bg-light">
@@ -16,25 +16,23 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" name="homepg" id="homepg" href="../home.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="http://www.bbc.co.uk/sport">Sports</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Life & Work
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="bbc.co.uk/sport">BBC</a></li>
-            <li><a class="dropdown-item" href="google.co.uk">Google</a></li>
+          <ul class="dropdown-content dropdown-menu">
+            <li><a class="dropdown-item" href="http://www.google.co.uk">Google</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="https://www.linkedin.com/in/ashley-lee-richards/">My LinkedIn</a></li>
+            <li><a class="dropdown-item" href="https://github.com/leerichie/">My Github</a></li>
           </ul>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li> -->
+   
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -44,41 +42,69 @@
   </div>
 </nav>
 <body>
-    <section class="sep-boxes">
-  <ul class="title-one">
-    <label for="exampleFormControlInput1" class="form-label">Search:</label>
-    <div class="le-box">
-      <!-- <label for="exampleFormControlInput1" class="form-label">Artist</label> -->
-      <input type="artist" class="form-control" id="exampleFormControlInput1" placeholder="Artist name...">
-     <button class="btn btn-outline-success le-button" type="submit">Search</button>
+
+  <!-- create -->
+
+  <div class="flex-container">
+<div class="row">
+  <div class="column">
+    <ul class="title-one">
+      <form #regForm="ngForm" (ngSubmit)="register(regForm)">
+      <label for="artist" class="form-label">Add to collection:</label>
+      <div class="le-box">
+        <input type="text" #artist (ngModel)="artist" name="artist" id="artist" placeholder="Artist name...">
+    <br><br>
+      <input type="trackTitle" #trackTitle (ngModel)="trackTitle" name="trackTitle" id="trackTitle" placeholder="Track title...">
+        <input type="btn btn-outline-success" class="button-space" type="submit" value="Create">
+      </div>
+    </form>
+  </ul>
   </div>
-  <div class="le-box">
-     <!-- <label for="exampleFormControlInput1" class="form-label">Track Title</label> -->
-      <input type="trackTitle" class="form-control" id="exampleFormControlInput1" placeholder="Track title...">
-      <button class="btn btn-outline-success le-button" type="submit">Search</button>
+
+<!-- search -->
+
+  <div class="column">
+    <ul class="title-one">
+      <form #regForm="ngForm" (ngSubmit)="register(regForm)">
+      <label for="artist" class="form-label">Search collection:</label>
+      <div class="le-box">
+        <input type="text" #artist (ngModel)="artist" name="artist" id="artist" placeholder="Artist name...">
+        <input type="btn btn-outline-success" class="button-space" type="submit" value="Search artist">
+    <br><br>
+      <input type="trackTitle" #trackTitle (ngModel)="trackTitle" name="trackTitle" id="trackTitle" placeholder="Track title...">
+        <input type="btn btn-outline-success" class="button-space" type="submit" value="Search track">
+      </div>
+    </form>
+  </ul>
   </div>
-</ul>
-<div>
-  <tbody>
+</div>
+</div>
+
+<!-- collection -->
+
+<div class="flex-container">
+  <div class="row">
+ 
     <ul class="title-two">
       <div class="le-box-two">
         <label for="form-label" class="form-label">Track List</label>
+        <td class="heading-titles td-number">ID</td>
+        <td class="heading-titles">Artist</td>
+        <td class="heading-titles">Track Title</td>
     <tr *ngFor="let user of users">
+      <td class="td-number">{{user.id}}</td>
       <td>{{user.artist}}</td>
       <td>{{user.trackTitle}}</td>
-      <td>
-        <!-- <a href="mailto:{{user.email}}">{{user.email}}</a> -->
-      </td>
-      <td>
-        <a href="#" class="btn btn-outline-success le-button">Update</a>
-        <button class="btn btn-outline-success le-button">Delete</button>
+      <td class="button-collection">
+        <a href="#" class="btn btn-outline-success le-button ">Update</a>
+        <button class="btn btn-outline-success le-button-delete" (click)="deleteU(user)">Delete</button>
       </td>
     </tr>
     </div>
     </ul>
-  </tbody>
+
 </div>
-</section>
+</div>
 </body>
-<SCRIPt></SCRIPt>
+<!-- <script type="text/javascript"> src='./script.js'</script> -->
 </html>

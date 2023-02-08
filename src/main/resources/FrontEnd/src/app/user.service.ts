@@ -15,16 +15,22 @@ export class UserService {
     public getUser(): Observable<User[]> {
         return this.http.get<User[]>(`${this.apiServerUrl}/user/all`);
     }
+    public getOneUser(id: number): Observable<User> {
+        const url = `${this.apiServerUrl}/${id}`;
+        return this.http.get<User>(url);
+      }
 
     public addUser(user: User): Observable<User[]> {
         return this.http.post<User[]>(`${this.apiServerUrl}/user/add`, user);
     }
 
     public updateUser(user: User): Observable<User[]> {
-        return this.http.put<User[]>(`${this.apiServerUrl}/user/update`, user);
+        const url = `${this.apiServerUrl}/${user.id}`;
+        return this.http.put<User[]>(url, user);
     }
 
-    public deleteUser(userId: number): Observable<void[]> {
-        return this.http.delete<void[]>(`${this.apiServerUrl}/user/delete/$(userId)`);
+    public deleteUser(user: User): Observable<User[]> {
+        const url = `${this.apiServerUrl}/${user.id}`;
+        return this.http.delete<User[]>(url);
     }
 }

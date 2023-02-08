@@ -15,23 +15,34 @@ h1 {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 400px;
   border: 2px solid rgb(153, 148, 148);
-  padding: 20px;
-  padding-bottom: 5px;
+  padding: 30px;
   margin: 30px;
 }
 .title-two {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 1000px;
+    width: 820px;
   border: 2px solid rgb(153, 148, 148);
-  padding: 20px;
-  padding-bottom: 5px;
+  padding: 30px;
   margin: 30px;
 }
 .le-button {
     width: 80px;
     border: 1px solid rgb(10, 131, 137);
     padding: 2px;
-    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 2px;
+
+}
+.button-space {
+margin-left: 15px;
+}
+.le-button-delete{
+    width: 80px;
+    border: 1px solid rgb(218, 52, 43);
+    padding: 2px;
+    margin-left: 15px;
+    margin-bottom: 2px;
+    color: red;
 }
 .le-box{
     padding-bottom: 30px;
@@ -40,10 +51,22 @@ h1 {
 
 .le-box-two{
     padding-bottom: 15px;
-
 }
+
 table, th, td {
-    width: 500px
+    width: 500px;
+  }
+
+.td-number {
+    width: 100px;
+  }
+
+  .button-collection{
+    padding-right: 0px;
+  }
+
+  .trackTitle{
+    padding-left: 10px;
   }
 
 .exampleFormControlInput1{
@@ -65,8 +88,63 @@ table, th, td {
     font-size: larger;
     font-weight: bold;
     font-family: fantasy;
+
 }
 .sep-boxes{
     flex-wrap: wrap;
-
+}
+.heading-titles{
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+}
+.flex-container-top {
+    display: flex;
+    flex-direction: row;
+  }
+  .column {
+    width: 40%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  .row-home1{
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: palevioletred;
+    text-shadow: 1px 1px red;
+  }
+ 
+  .dropbtn {
+    display: inline-block;
+    color: rgb(146, 78, 78);
+    text-align: center;
+    padding: 3px;
+    text-decoration: none;
+  }  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: #cdcc95;
 }

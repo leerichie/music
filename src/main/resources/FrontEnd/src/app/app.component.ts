@@ -15,7 +15,19 @@ export class AppComponent implements OnInit {
   public updateUser: User;
   public deleteUser: User;
 
+  register(regForm: { value: User; }) {
+    this.userService.addUser(regForm.value).subscribe(
+      (response: User[]) => {
+        this.users = response;
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message)
+      }
+    )
+  }
+
   constructor(private userService: UserService) {}
+
 
   public getUsers(): void {
     this.userService.getUser().subscribe(
@@ -29,6 +41,10 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.getUsers();
-  }
 
+  }
+  public deleteU(userId: User): void {
+    this.users = this.users.filter(u => u !==userId);
+    this.userService.deleteUser(userId).subscribe;
+  }
 }
